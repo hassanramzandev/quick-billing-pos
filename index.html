@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Software</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="billing-container">
+
+        <header>
+            <h1>Billing Software</h1>
+            <p>Create and manage your bill</p>
+        </header>
+
+        <section class="add-product">
+            <h2>Add Product</h2>
+
+            <div class="form">
+    
+                <input
+                    type="text"
+                    id="product"
+                    placeholder="Product Name"
+                >
+
+                <input
+                    type="any"
+                    id="price"
+                    placeholder="Price"
+                    min="0"
+                    step="1"
+                >
+
+                <input
+                    type="any"
+                    id="qty"
+                    placeholder="Quantity"
+                    min="1"
+                    step="1"
+                >
+
+                <input
+                    type="any"
+                    id="discount"
+                    placeholder="Discount %"
+                    min="0"
+                    max="100"
+                    step="1"
+                >
+
+                <button id="addBtn">
+
+                    Add Product
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="bill-section">
+
+            <h2>Bill Items</h2>
+
+            <div class="table-container">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Total</th>
+                            <th>Discount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="bill">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <section class="summary">
+
+            <!-- TOTAL ITEMS -->
+
+            <div class="summary-box">
+
+                <span>Total Items</span>
+                <strong id="items">
+                    0
+                </strong>
+            </div>
+
+            <div class="summary-box">
+                <span>Net Amount</span>
+                <strong>
+                    Rs <span id="netTotal">0</span>
+                </strong>
+            </div>
+
+            <div class="summary-box">
+                <span>Total Discount</span>
+                <strong>
+                    Rs <span id="Totaldiscount">0</span>
+                </strong>
+            </div>
+
+            <div class="summary-box grand-total">
+                <span>Grand Total</span>
+                <strong>
+                    Rs <span id="grand">0</span>
+                </strong>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
